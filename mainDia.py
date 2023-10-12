@@ -34,6 +34,7 @@ async def chnl(ctx,command:str):
             img_url = img_url.replace("data:image/svg+xml;base64,", "")
             img_url = base64.b64decode(img_url).decode('utf-8')
             img_url = urllib.parse.unquote(img_url)
+            #there is just a link conversion going on here
             img_url = img_url.split("data-u=")[1].split('"')[1]
             img_url = img_url.replace("https://somelink","https://cdn.shortpixel.ai/spai/q_lossy+ret_img+to_auto/somelink.com")
             image_urls.append(img_url)
